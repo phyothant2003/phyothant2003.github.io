@@ -1,0 +1,69 @@
+
+      body{
+        background: linear-gradient(45deg,transparent,#90caf9);
+      }
+      .head_title{
+        font-weight: bolder;
+        font-size: 40px;
+        text-transform: uppercase;
+        letter-spacing: 3px;
+      }
+      .main{
+        text-align:center; margin-top: 250px;
+      }      
+      select{
+        border-radius: 2px;
+        height: 25px;
+      }
+      input{
+        height: 25px;
+      }
+      .sub_title{
+        font-weight: bold;
+        font-size:20px;
+      }
+      input,select{
+        margin-right:10px;
+        margin-left: 10px;
+      }
+      span{
+        font-weight: bold;
+      }
+      .ss{
+        border: 1px solid black; width: 612px; height: 145px; margin-top:20px ; border-radius: 5px;
+      }
+      
+      body{
+        background: linear-gradient(45deg,transparent,#90caf9);
+      }
+      .head_title{
+        font-weight: bolder;
+        font-size: 40px;
+        text-transform: uppercase;
+        letter-spacing: 3px;
+      }
+      .main{
+        text-align:center; margin-top: 200px;
+      }      
+      select{
+        border-radius: 2px;
+        height: 25px;
+      }
+      input{
+        height: 25px;
+      }
+      .sub_title{
+        font-weight: bold;
+        font-size:20px;
+      }
+      input,select{
+        margin-right:10px;
+        margin-left: 10px;
+      }
+      span{
+        font-weight: bold;
+      }
+      .ss{
+        border: 1px solid black; width: 612px; height: 145px; margin-top:20px ; border-radius: 5px;
+      }
+    

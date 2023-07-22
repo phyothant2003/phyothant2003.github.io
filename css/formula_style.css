@@ -1,0 +1,27 @@
+
+    body{
+        background: linear-gradient(45deg,transparent,#90caf9);
+        text-align: center;
+    }
+    .main{
+        margin-top: 200px;
+    }
+    h1{
+        font-size: 42px;
+    }
+    select{
+    height: 30px;
+    width: 148px;
+    border-radius: 5px;
+}
+  th{
+    text-align: right;
+  }
+   
+b{
+    font-size: 1.2em;
+}
+p{
+    font-weight: bold;
+}
+    
