@@ -1,0 +1,362 @@
+<html>
+<head>
+<title>Formula</title>
+<link rel="stylesheet" href="css/formula_style.css">
+</head>
+
+<body>
+<div class="main">
+<h1>Formula Calculation</h1>
+<lable for="formula"><b>Select a type of formula : </b></lable>
+<select id="formula" onchange="select_option()">
+<option value="frsa">Square Area</option>
+<option value="frra">Rectangle Area</option>
+<option value="frta">Triangle Area</option>
+<option value="frtpa">Trapeziod Area</option>
+<option value="frca">Circle Area</option>
+<option value="frsc">Cube Surface Area</option>
+<option value="fcsa">Cylinder Surface Area</option>
+<option value="fcsc">Cone Surface Area</option>
+<option value="fssa">Sphere Surface Area</option>
+<option value="fsp">Square Perimeter</option>
+<option value="frp">Rectangle Perimeter</option>
+<option value="fcc">Circle Circumference</option>
+</select>
+        <div id="frsa">
+            <h3 style="text-align: center;
+            height: 3.2%;
+            background-color: white;
+            border: 1px solid black;
+            width: 18%;
+            margin-left: 41%;">Square Area = Width x Height</h3>
+            <center>
+                <table>
+                    <tr>
+                        <th>Width:</th>
+                        <td><input id="w" type="text"></td>
+                    </tr>
+                    <tr>
+                        <th>Height:</th>
+                        <td><input id="h" type="text"></td>
+                    </tr>
+                    <tr>
+                    <td></td>
+                    <td><button onclick="calculateArea()">Calculate</button></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td><p id="r"></p></td>
+                    </tr>
+                </table>
+            </center>
+        </div>
+
+        <div id="frra" style="display: none;">
+            <h3 style="text-align: center;
+            height: 3.2%;
+            background-color: white;
+            border: 1px solid black;
+            width: 18%;
+            margin-left: 41%;">Rectangle Area = Length x Base </h3>
+            <center>
+                <table>
+                    <tr>
+                        <th>Length:</th>
+                        <td><input id="l" type="text"></td>
+                    </tr>
+                    <tr>
+                        <th>Base:</th>
+                        <td><input id="b" type="text"></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td><button onclick="calculateRectangleArea()">Calculate</button></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td><p id="ra"></p></td>
+                    </tr>
+                </table>
+            </center>
+        </div>
+
+        <div id="frta" style="display: none;">
+            <h3 style="text-align: center;
+            height: 3.2%;
+            background-color: white;
+            border: 1px solid black;
+            width: 19%;
+            margin-left: 41%;">Triangle Area = 1/2(Base x Height)</h3>
+            <center>
+                <table>
+                    <tr>
+                        <th>Base:</th>
+                        <td><input id="b1" type="text"></td>
+                    </tr>
+                    <tr>
+                        <th>Height:</th>
+                        <td><input id="h1" type="text"></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td><button onclick="calculateTriangleArea()">Calculate</button></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td><p id="ta"></p></td>
+                    </tr>
+                </table>
+            </center>
+        </div> 
+
+         <div id="frsc" style="display: none;">
+                <h3 style="text-align: center;
+                height: 4%;
+                background-color: white;
+                border: 1px solid black;
+                width: 18%;
+                margin-left: 41%;">Cube Surface Area = 6 *Length<sup>2</sup> </h3>
+                <center>
+                    <table>
+                        <tr>
+                            <th>Length:</th>
+                            <td><input id="l1" type="text"></td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td><button onclick="calculateCubeSurfaceArea()">Calculate</button></td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td><p id="c1"></p></td>
+                        </tr>
+                    </table>
+                </center>
+        </div>  
+
+        <div id="frtpa" style="display: none;">
+            <h3 style="text-align: center;
+            height: 3.2%;
+            background-color: white;
+            border: 1px solid black;
+            width: 23%;
+            margin-left: 39%;">Trapeziod Area = ((Base1+Base2)*High)/2</h3>
+            <center>
+                <table>
+                    <tr>
+                        <th>Base1:</th>
+                        <td><input id="b2" type="text"></td>
+                    </tr>
+                    <tr>
+                        <th>Base2:</th>
+                        <td><input id="b3" type="text"></td>
+                    </tr>
+                    <tr>
+                        <th>Height:</th>
+                        <td><input id="h2" type="text"></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td><button onclick="calculateTrapeziodArea()">Calculate</button></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td><p id="tpa"></p></td>
+                    </tr>
+                </table>
+            </center>
+        </div>   
+        
+
+        <div id="frca" style="display: none;">
+            <h3 style="text-align: center;
+            height: 3.4%;
+            background-color: white;
+            border: 1px solid black;
+            width: 18%;
+            margin-left: 41%;">Circle Area = PI*Radius<sup>2</sup></h3>
+            <center>
+                <table>
+                    <tr>
+                        <th>Radius:</th>
+                        <td><input id="ri" type="text"></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td><button onclick="calculateCircleArea()">Calculate</button></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td><p id="c"></p></td>
+                    </tr>
+                </table>
+            </center>
+        </div>
+
+        <div id="fcsa" style="display: none;">
+                <h3 style="text-align: center;
+                height: 3.2%;
+                background-color: white;
+                border: 1px solid black;
+                width: 25%;
+                margin-left: 38%;">Cylinder Surface Area = 2*PI*Radius*Height</h3>
+                <center>
+                    <table>
+                        <tr>
+                            <th>Radius:</th>
+                            <td><input id="ri5" type="text"></td>
+                        </tr>
+                        <tr>
+                            <th>Height:</th>
+                            <td><input id="h3" type="text"></td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td><button onclick="calculateCylinderSurfaceArea()">Calculate</button></td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td><p id="cy"></p></td>
+                        </tr>
+                    </table>
+                </center>
+            </div>
+            
+            <div id="fcsc" style="display: none;">
+                <h3 style="text-align: center;
+                height: 3.2%;
+                background-color: white;
+                border: 1px solid black;
+                width: 22%;
+                margin-left: 39%;">Cone Surface Area = PI*Radius*Length</h3>
+                <center>
+                    <table>
+                        <tr>
+                            <th>Radius:</th>
+                            <td><input id="ri2" type="text"></td>
+                        </tr>
+                        <tr>
+                            <th>Lehgth:</th>
+                            <td><input id="l4" type="text"></td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td><button onclick="calculateConeSurfaceArea()">Calculate</button></td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td><p id="csa"></p></td>
+                        </tr>
+                    </table>
+                </center>
+            </div>
+
+            <div id="fssa" style="display: none;">
+                <h3 style="text-align: center;
+                height: 4%;
+                background-color: white;
+                border: 1px solid black;
+                width: 20%;
+                margin-left: 40%;">Sphere Surface Area = 4*PI*Radius<sup>2</sup></h3>
+                <center>
+                    <table>
+                        <tr>
+                            <th>Radius:</th>
+                            <td><input id="ri3" type="text"></td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td><button onclick="calculateSphereSurfaceArea()">Calculate</button></td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td><p id="c3"></p></td>
+                        </tr>
+                    </table>
+                </center>
+            </div>  
+            <div id="fsp" style="display: none;">
+                <h3 style="text-align: center;
+                height: 3.2%;
+                background-color: white;
+                border: 1px solid black;
+                width: 18%;
+                margin-left: 41%;">Square Permeter = 4*Length</h3>
+                <center>
+                    <table>
+                        <tr>
+                            <th>Length:</th>
+                            <td><input id="l5" type="text"></td>
+                        </tr>
+                        <tr>
+                        <td></td>
+                        <td><button onclick="calculateSquarePerimeter()">Calculate</button></td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td><p id="sp"></p></td>
+                        </tr>
+                    </table>
+                </center>
+            </div> 
+            <div id="frp" style="display: none;">
+                <h3 style="text-align: center;
+                height: 3.2%;
+                background-color: white;
+                border: 1px solid black;
+                width: 21%;
+                margin-left: 40%;">Rectangle Permeter = 2*Length*Base</h3>
+                <center>
+                    <table>
+                        <tr>
+                            <th>Length:</th>
+                            <td><input id="l6" type="text"></td>
+                        </tr>
+                        <tr>
+                            <th>Base:</th>
+                            <td><input id="b6" type="text"></td>
+                        </tr>
+                        <tr>
+                        <td></td>
+                        <td><button onclick="calculateRectanglePerimeter()">Calculate</button></td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td><p id="rp"></p></td>
+                        </tr>
+                    </table>
+                </center>
+            </div> 
+            <div id="fcc" style="display: none;">
+                <h3 style="text-align: center;
+                height: 3.2%;
+                background-color: white;
+                border: 1px solid black;
+                width: 21%;
+                margin-left: 40%;">Circle Circumference = 2*PI*Radius</h3>
+                <center>
+                    <table>
+                        <tr>
+                            <th>Radius:</th>
+                            <td><input id="r7" type="text"></td>
+                        </tr>
+                        
+                        <tr>
+                        <td></td>
+                        <td><button onclick="calculateCircleCircumference()">Calculate</button></td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td><p id="rc"></p></td>
+                        </tr>
+                    </table>
+                </center>
+            </div> 
+</div>   
+    
+
+
+    <script src="js/formula_cal.js"></script>
+</body>
+</html>
+    
